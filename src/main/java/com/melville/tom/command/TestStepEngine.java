@@ -1,10 +1,10 @@
-package com.melville.tom;
+package com.melville.tom.command;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.melville.tom.steps.ExecuteRequest;
-import com.melville.tom.steps.Login;
+import com.melville.tom.command.steps.ExecuteRequest;
+import com.melville.tom.command.steps.Login;
 
 public final class TestStepEngine {
     private List<TestStep> steps = new ArrayList<>();

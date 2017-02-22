@@ -1,4 +1,4 @@
-package com.melville.tom;
+package com.melville.tom.command;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.melville.tom.tools;
+package com.melville.tom.command.tools;
 
 public class HttpTool implements Tool {
     private final String username;

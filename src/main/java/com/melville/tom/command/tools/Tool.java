@@ -1,4 +1,4 @@
-package com.melville.tom.tools;
+package com.melville.tom.command.tools;
 
 public interface Tool {
     void login();

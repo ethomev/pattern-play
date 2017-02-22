@@ -1,9 +1,9 @@
-package com.melville.tom.steps;
+package com.melville.tom.command.steps;
 
-import com.melville.tom.Session;
-import com.melville.tom.TestStep;
-import com.melville.tom.tools.HttpTool;
-import com.melville.tom.tools.Tool;
+import com.melville.tom.command.Session;
+import com.melville.tom.command.TestStep;
+import com.melville.tom.command.tools.HttpTool;
+import com.melville.tom.command.tools.Tool;
 
 public class Login implements TestStep {
 
