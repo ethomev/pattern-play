@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.melville.tom.command.steps.ExecuteRequest;
 import com.melville.tom.command.steps.Login;
+import com.melville.tom.command.steps.Logout;
 
 public final class Engine {
     private List<Step> steps = new ArrayList<>();
@@ -12,12 +13,13 @@ public final class Engine {
 
     public static void main(String[] args){
         Engine engine = new Engine();
-        engine.addTestStep(new Login("administrator", "password"));
-        engine.addTestStep(new ExecuteRequest("my/rest/end/point"));
+        engine.addStep(new Login("http://localhost/","administrator", "password"));
+        engine.addStep(new ExecuteRequest("my/rest/end/point"));
+        engine.addStep(new Logout());
         engine.run();
     }
 
-    public void addTestStep(Step step){
+    public void addStep(Step step){
         steps.add(step);
     }
 

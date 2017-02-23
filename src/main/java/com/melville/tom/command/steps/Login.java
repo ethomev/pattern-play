@@ -9,15 +9,16 @@ public class Login implements Step {
 
     private final String username;
     private final String password;
+    private String url;
 
-    public Login(String username, String password){
+    public Login(String url, String username, String password){
+        this.url = url;
         this.username = username;
         this.password = password;
     }
     @Override
     public Session execute(final Session session) {
-        System.out.println("Logging into the system");
-        Tool tool = new HttpTool("http://localhost");
+        Tool tool = new HttpTool(url);
         session.setAttribute("username", username);
         session.setAttribute("password", password);
         tool.login(username, password);

@@ -24,19 +24,22 @@ public class HttpTool implements Tool {
         // Take username & password and log into some system.
         // HttpClient from apache https://hc.apache.org/
         httpClient = HttpClients.createDefault();
-        HttpPost post = new HttpPost(url+"/login");
+        HttpPost post = new HttpPost(url+"login");
+        System.out.println("Logging in");
         loggedIn = true;
     }
 
     @Override
     public void execute(Request request) {
+        HttpRequest httpRequest = (HttpRequest) request;
         System.out.println("LoggedIn is " + loggedIn);
-        System.out.println("Executing "+ url);
+        System.out.println("Executing "+ url+httpRequest.getUrl());
     }
 
     @Override
     public void logout() {
         loggedIn = false;
+        System.out.println("LoggedIn is "+loggedIn);
     }
 
     @Override
