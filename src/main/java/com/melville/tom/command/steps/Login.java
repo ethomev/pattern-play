@@ -17,10 +17,10 @@ public class Login implements Step {
     @Override
     public Session execute(final Session session) {
         System.out.println("Logging into the system");
-        Tool tool = new HttpTool(username, password);
+        Tool tool = new HttpTool("http://localhost");
         session.setAttribute("username", username);
         session.setAttribute("password", password);
-        tool.login();
+        tool.login(username, password);
         session.setAttribute("tool", tool);
         return session;
     }
