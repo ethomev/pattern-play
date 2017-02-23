@@ -1,5 +1,5 @@
 package com.melville.tom.command;
 
-public interface TestStep {
+public interface Step {
     Session execute(Session session);
 }

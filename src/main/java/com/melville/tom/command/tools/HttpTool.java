@@ -14,7 +14,7 @@ public class HttpTool implements Tool {
     @Override
     public void login() {
         // Take username & password and log into some system.
-        // HttpClient from apaceh https://hc.apache.org/
+        // HttpClient from apache https://hc.apache.org/
         loggedIn = true;
     }
 

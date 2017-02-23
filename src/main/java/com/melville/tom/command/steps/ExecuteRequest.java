@@ -1,10 +1,10 @@
 package com.melville.tom.command.steps;
 
 import com.melville.tom.command.Session;
-import com.melville.tom.command.TestStep;
+import com.melville.tom.command.Step;
 import com.melville.tom.command.tools.Tool;
 
-public class ExecuteRequest implements TestStep {
+public class ExecuteRequest implements Step {
     private String url;
 
     public ExecuteRequest(String url){

@@ -1,11 +1,11 @@
 package com.melville.tom.command.steps;
 
 import com.melville.tom.command.Session;
-import com.melville.tom.command.TestStep;
+import com.melville.tom.command.Step;
 import com.melville.tom.command.tools.HttpTool;
 import com.melville.tom.command.tools.Tool;
 
-public class Login implements TestStep {
+public class Login implements Step {
 
     private final String username;
     private final String password;
