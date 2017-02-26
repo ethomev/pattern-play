@@ -5,6 +5,13 @@ import java.util.Map;
 
 public class MapSession implements Session {
     Map<String, Object> attributes = new HashMap<>();
+    private static MapSession mapSession = new MapSession();
+
+    private MapSession(){}
+
+    public static MapSession instance(){
+        return mapSession;
+    }
 
     @Override
     public <T> T getAttribute(final String key) {

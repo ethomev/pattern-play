@@ -9,7 +9,6 @@ import com.melville.tom.command.steps.Logout;
 
 public final class Engine {
     private List<Step> steps = new ArrayList<>();
-    private Session session = new MapSession();
 
     public static void main(String[] args){
         Engine engine = new Engine();
@@ -25,7 +24,8 @@ public final class Engine {
 
     public void run(){
         for(Step step : steps){
-            session = step.execute(session);
+            System.out.println("Executing: "+ step.toString());
+            step.execute();
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.melville.tom.command.steps;
 
+import com.melville.tom.command.MapSession;
 import com.melville.tom.command.Session;
 import com.melville.tom.command.Step;
 import com.melville.tom.command.tools.HttpRequest;
@@ -14,10 +15,10 @@ public class ExecuteRequest implements Step {
     }
 
     @Override
-    public Session execute(final Session session) {
+    public void execute() {
+        Session session = MapSession.instance();
         Tool tool = session.getAttribute("tool");
         Request request = new HttpRequest(resource);
         tool.execute(request);
-        return session;
     }
 }

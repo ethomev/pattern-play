@@ -1,5 +1,6 @@
 package com.melville.tom.command.steps;
 
+import com.melville.tom.command.MapSession;
 import com.melville.tom.command.Session;
 import com.melville.tom.command.Step;
 import com.melville.tom.command.tools.HttpTool;
@@ -17,12 +18,12 @@ public class Login implements Step {
         this.password = password;
     }
     @Override
-    public Session execute(final Session session) {
+    public void execute() {
+        Session session = MapSession.instance();
         Tool tool = new HttpTool(url);
         session.setAttribute("username", username);
         session.setAttribute("password", password);
         tool.login(username, password);
         session.setAttribute("tool", tool);
-        return session;
     }
 }
