@@ -25,14 +25,15 @@ Private constructor, static field and "getInstance" method.
 
 #### Session
 
-Information needs to pass between steps. The singleton pattern will ensure that all the steps share the same instance.
+Information needs to pass between steps. 
+The singleton pattern will ensure that all the steps share the same instance.
 
-*this will make it hard to unit test these classes*
+*this will make it hard to unit test these classes if I want to mock the session*
 
 ### Facade Pattern
 
 Create a new interface to "wrap" an existing API.
-This can be to simplify the API, adapt it to your needs, or control access.
+This can be to simplify the API, adapt it to your needs, or control functionality.
 
 #### Tool & HttpTool
 
