@@ -3,14 +3,14 @@ package com.melville.tom.command;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapSession implements Session {
-    Map<String, Object> attributes = new HashMap<>();
-    private static MapSession mapSession = new MapSession();
+public final class MapSession implements Session {
+    private Map<String, Object> attributes = new HashMap<>();
+    private static Session session = new MapSession();
 
     private MapSession(){}
 
-    public static MapSession instance(){
-        return mapSession;
+    public static Session instance(){
+        return session;
     }
 
     @Override

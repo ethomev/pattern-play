@@ -8,17 +8,17 @@ import com.melville.tom.command.tools.Request;
 import com.melville.tom.command.tools.Tool;
 
 public class ExecuteRequest implements Step {
-    private String resource;
+    private final String resource;
 
-    public ExecuteRequest(String resource){
+    public ExecuteRequest(final String resource){
         this.resource = resource;
     }
 
     @Override
     public void execute() {
-        Session session = MapSession.instance();
-        Tool tool = session.getAttribute("tool");
-        Request request = new HttpRequest(resource);
+        final Session session = MapSession.instance();
+        final Tool tool = session.getAttribute("tool");
+        final Request request = new HttpRequest(resource);
         tool.execute(request);
     }
 }

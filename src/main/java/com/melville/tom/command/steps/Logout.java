@@ -8,8 +8,8 @@ import com.melville.tom.command.tools.Tool;
 public class Logout implements Step {
     @Override
     public void execute() {
-        Session session = MapSession.instance();
-        Tool tool = session.getAttribute("tool");
+        final Session session = MapSession.instance();
+        final Tool tool = session.getAttribute("tool");
         tool.logout();
     }
 }
