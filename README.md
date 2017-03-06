@@ -38,3 +38,19 @@ This can be to simplify the API, adapt it to your needs, or control functionalit
 #### Tool & HttpTool
 
 HttpTool will be a facade on top of apache common components httpclient
+
+### Decorator Pattern
+
+"Decorate" the functionality of an existing implementation.
+The decorator impl is an instance of the API and has an instance of the API.
+This pattern can allow generic functionality be applied to multiple implementations of an API.
+Useful when some new functionality is required in an API in production.
+
+
+Can also be used like a builder. An interface & a set of subclasses can be composed into one final object.
+A property of the final object is spread throughout the subclasses and the decorate pattern allows the jvm to go through the chain and create the 
+final property.
+ 
+#### Logger
+
+Logger class decorates each step with logging of useful execution information: started with args and finished in x time.

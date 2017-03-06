@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import com.melville.tom.command.steps.ExecuteRequest;
+import com.melville.tom.command.steps.Logger;
 import com.melville.tom.command.steps.Login;
 import com.melville.tom.command.steps.Logout;
 
@@ -20,7 +21,7 @@ public final class SimpleEngine implements Engine {
 
     @Override
     public void addStep(final Step step){
-        steps.add(step);
+        steps.add(new Logger(step));
     }
 
     @Override
