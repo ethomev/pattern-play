@@ -1,4 +1,4 @@
-package com.melville.tom.command.tools;
+package com.melville.tom.simple.scenario.tools;
 
 public interface Tool {
     void login(String username, String password);

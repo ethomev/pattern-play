@@ -54,3 +54,16 @@ final property.
 #### Logger
 
 Logger class decorates each step with logging of useful execution information: started with args and finished in x time.
+
+### Observer Pattern
+
+This pattern allows classes to be notified, and updated when other classes change.
+
+#### StepObserver & StepSubject
+
+The StepSubject adds, removes & notifies observers. The StepObserver is updated by a StepSubject.
+In this case the Observer will store KPI information about the step execution.
+
+## Notes & Thoughts
+
+* From my usage of Decorator & Observer they could be used for the same problem.

@@ -1,4 +1,4 @@
-package com.melville.tom.command;
+package com.melville.tom.simple.scenario;
 
 @FunctionalInterface
 public interface Step {

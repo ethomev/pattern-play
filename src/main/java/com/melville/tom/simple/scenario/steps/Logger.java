@@ -1,9 +1,9 @@
-package com.melville.tom.command.steps;
+package com.melville.tom.simple.scenario.steps;
 
 import java.util.concurrent.TimeUnit;
 
 import com.google.common.base.Stopwatch;
-import com.melville.tom.command.Step;
+import com.melville.tom.simple.scenario.Step;
 
 public class Logger implements Step {
 

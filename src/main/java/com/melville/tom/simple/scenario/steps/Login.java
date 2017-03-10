@@ -1,10 +1,10 @@
-package com.melville.tom.command.steps;
+package com.melville.tom.simple.scenario.steps;
 
-import com.melville.tom.command.MapSession;
-import com.melville.tom.command.Session;
-import com.melville.tom.command.Step;
-import com.melville.tom.command.tools.HttpTool;
-import com.melville.tom.command.tools.Tool;
+import com.melville.tom.simple.scenario.Session;
+import com.melville.tom.simple.scenario.MapSession;
+import com.melville.tom.simple.scenario.Step;
+import com.melville.tom.simple.scenario.tools.HttpTool;
+import com.melville.tom.simple.scenario.tools.Tool;
 
 public class Login implements Step {
 
