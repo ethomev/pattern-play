@@ -22,6 +22,9 @@ This is the Active Object pattern.
 
 This pattern ensures there is only one instance of a class in the JVM.
 Private constructor, static field and "getInstance" method.
+You can have an Eager or Lazy Singleton.
+* Eager: instance is instantiated at class-load time
+* Lazy: instance is instantiated at first call to getInstance
 
 #### Session
 
@@ -29,6 +32,10 @@ Information needs to pass between steps.
 The singleton pattern will ensure that all the steps share the same instance.
 
 *this will make it hard to unit test these classes if I want to mock the session*
+
+*Can lead to obscure issues in multi-threaded program*
+
+To overcome threading issues, use lazy instantiation and synchronize the instantiation. 
 
 ### Facade Pattern
 
