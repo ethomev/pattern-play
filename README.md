@@ -58,6 +58,7 @@ Logger class decorates each step with logging of useful execution information: s
 ### Observer Pattern
 
 This pattern allows classes to be notified, and updated when other classes change.
+"When updates need to be done at multiple points (Observer) depending on changes in state at another place (Subject)"
 
 #### StepObserver & StepSubject
 
@@ -66,4 +67,7 @@ In this case the Observer will store KPI information about the step execution.
 
 ## Notes & Thoughts
 
-* From my usage of Decorator & Observer they could be used for the same problem.
+### From my usage of Decorator & Observer they could be used for the same problem?
+
+* They seem to both add new functionality to an existing API.
+* A difference is that the class being decorated knows nothing about it's decorator but the Subject must know about it's Observer.

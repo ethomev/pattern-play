@@ -2,9 +2,7 @@ package com.melville.tom.simple.scenario;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
-import com.google.common.collect.FluentIterable;
 import com.melville.tom.simple.scenario.steps.Logger;
 import com.melville.tom.simple.scenario.steps.Login;
 import com.melville.tom.simple.scenario.steps.ExecuteRequest;
@@ -30,9 +28,8 @@ public final class SimpleEngine implements Engine {
 
     @Override
     public void addObserver(final StepObserver observer) {
-        List<StepSubject> subjects = FluentIterable.from(steps).filter(StepSubject.class).toList();
-        for(StepSubject subject: subjects){
-            subject.addObserver(observer);
+        for(Step subject: steps){
+            //FIXME Struggling to add observers to step implementations that also implement StepSubject
         }
     }
 
