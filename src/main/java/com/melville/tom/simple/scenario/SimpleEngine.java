@@ -3,6 +3,10 @@ package com.melville.tom.simple.scenario;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.melville.tom.builder.ClassBuilder;
+import com.melville.tom.builder.ClassToBuild;
+import com.melville.tom.builder.Command;
+import com.melville.tom.builder.CommandBuilder;
 import com.melville.tom.simple.scenario.steps.Logger;
 import com.melville.tom.simple.scenario.steps.Login;
 import com.melville.tom.simple.scenario.steps.ExecuteRequest;
@@ -19,6 +23,8 @@ public final class SimpleEngine implements Engine {
         engine.addStep(new Logout());
         engine.addObserver(new TimeKpiObserver());
         engine.run();
+
+        Command command = new Command(new CommandBuilder());
     }
 
     @Override
@@ -30,6 +36,7 @@ public final class SimpleEngine implements Engine {
     public void addObserver(final StepObserver observer) {
         for(Step subject: steps){
             //FIXME Struggling to add observers to step implementations that also implement StepSubject
+            //Step & StepSubject are 2 separate interfaces which the class implements, StepSubject is not assignable from or an instance of Step
         }
     }
 
