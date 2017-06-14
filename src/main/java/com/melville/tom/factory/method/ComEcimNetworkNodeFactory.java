@@ -12,6 +12,7 @@ public class ComEcimNetworkNodeFactory implements NetworkNodeFactory{
             throw new UnsupportedOperationException("NeType not supported, "+neType);
         }
         //TODO Do something platform specific with the node
+        //Like give it the platform specific connectivity MO
         return networkNode;
     }
 }
